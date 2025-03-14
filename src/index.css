@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --heading: #1A1926;
+  --body-dark: #28263B;
+  --body-light: #637085;
+  --border-100: #e4e7eb;
+
+  --accent: #2D99FF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--body-dark);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px;
+}
+.btn-primary {
+  background-color: var(--accent);
+}
+.portal {
+  background-color: #EAECF0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  min-height: 100dvh;
+}
+
+.portal-module {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 50px 50px 20px 50px;
+  width: 40dvw;
+  
+  a {
+    text-decoration: none;
+  }
+}
+.portal-forms {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  gap: 1.8rem;
+  font-size: 0.8rem;
+
+  .form-label {
+    font-weight: 600;
+    color: var(--heading);
+  }
+  .form-control {
+    font-size: 0.7rem;
+    color: var(--body-light);
+    padding: 10px;
+    border-color: var(--border-100);
+    border-radius: 8px;
+  }
+  .form-check-label{
+    color: var(--body-dark);
+  }
+
+}
+
+.google {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  img {
+    align-self: center;
+  }
+}
+
+.separator {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  p {
+    align-self: center;
+    margin: 0 10px;
+    color: var(--body-light);
+    font-size: 0.6rem;
+  }
+  hr {
+    color: var(--border-100);
+  }
+}
