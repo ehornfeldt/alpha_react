@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
+  --portal-bg: #EAECF0;
+  --alpha-bg: #F1F3F7;
   --heading: #1A1926;
   --body-dark: #28263B;
   --body-light: #637085;
   --border-100: #e4e7eb;
+  --border-200: #E3E5E8;
 
-  --accent: #2D99FF;
+  --accent: rgb(45, 153, 255);
 }
 
 * {
@@ -27,6 +31,10 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
 }
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
 p {
   font-size: 0.8rem;
@@ -42,8 +50,10 @@ p {
 .btn-primary {
   background-color: var(--accent);
 }
+
+/* Login / Create account view */
 .portal {
-  background-color: #EAECF0;
+  background-color: var(--portal-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,5 +120,84 @@ p {
   }
   hr {
     color: var(--border-100);
+  }
+}
+
+/* Alpha view */
+
+.alpha {
+  background-color: var(--alpha-bg);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "side top" "side main";
+  height: 100dvh;
+
+  .side-menu {
+    grid-area: side;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-right: 1px solid var(--border-200);
+
+    .logo-place {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .logo-text {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--body-dark);
+      margin: 0;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      background-color: rgba(45, 153, 255, 0.1);
+      border-radius: 12px;
+      padding: 10px 70px 10px 20px;
+
+      p {
+        margin: 0;
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .top-menu {
+    grid-area: top;
+    border-bottom: 1px solid var(--border-200);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 20px;
+
+    .search-place {
+      display: flex;
+
+      .form-control {
+        font-size: 0.7rem;
+        color: var(--body-light);
+        border: none;
+        background: none;
+      }
+
+      .search-icon {
+        width: 0.7rem;
+      }
+    }
+    .right-menu {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+  }
+  .main-content {
+    grid-area: main;
+    padding: 30px 20px;
   }
 }

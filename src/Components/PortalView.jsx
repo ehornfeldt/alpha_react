@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { LoginForm } from "./LoginForm"
-import { SignUpForm } from "./SignUpForm"
+import { LoginForm } from "./Forms/LoginForm"
+import { SignUpForm } from "./Forms/SignUpForm"
 
 function PortalView({ title, logIn }) {
 
