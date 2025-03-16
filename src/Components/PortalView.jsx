@@ -2,7 +2,7 @@ import { useState } from "react"
 import { LoginForm } from "./Forms/LoginForm"
 import { SignUpForm } from "./Forms/SignUpForm"
 
-function PortalView({ title, logIn }) {
+function PortalView({ logIn }) {
 
     const [isLogIn, setIsLogIn] = useState(logIn)
 

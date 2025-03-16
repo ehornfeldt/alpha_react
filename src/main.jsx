@@ -8,7 +8,7 @@ import AlphaView from './Components/AplhaView.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
-    {/* <PortalView title="Login" logIn={true}/> */}
+    {/* <PortalView logIn={true}/> */}
     <AlphaView />
   </StrictMode>,
 )

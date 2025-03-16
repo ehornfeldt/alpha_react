@@ -14,16 +14,33 @@ function AlphaView({ title, logIn }) {
             <div className="top-menu">
                 <div className="search-place">
                     <img src="./src/assets/search-icon.svg" alt="search icon" />
-                    <input class="form-control" placeholder="Search anything..." />
+                    <input className="form-control" placeholder="Search anything..." />
                 </div>
                 <div className="right-menu">
                     <img src="./src/assets/notification-icon.svg" alt="notification icon" />
                     <img src="./src/assets/settings-icon.svg" alt="settings icon" />
+                    <div className="avatar-separator" />
                     <img src="./src/assets/avatar-icon.svg" alt="avatar icon" />
                 </div>
             </div>
             <div className="main-content">
-                <h2>Projects</h2>
+                <div className="main-area">
+                    <div className="header-content">
+                        <h2>Projects</h2>
+                        <button type="button" className="btn btn-primary add-project-btn">
+                            <img src="./src/assets/plus.svg" alt="plus icon" />
+                            Add Project
+                        </button>
+                    </div>
+                    <div className="project-menu">
+                        <p>ALL[]</p>
+                        <p>STARTED[]</p>
+                        <p>COMPLETED[]</p>
+                    </div>
+                    <div className="project-components">
+                        
+                    </div>
+                </div>
             </div>
         </div>
     )

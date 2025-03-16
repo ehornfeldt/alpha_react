@@ -46,6 +46,7 @@ p {
   font-weight: 600;
   border-radius: 8px;
   padding: 10px;
+  border: none;
 }
 .btn-primary {
   background-color: var(--accent);
@@ -186,18 +187,57 @@ p {
         background: none;
       }
 
-      .search-icon {
-        width: 0.7rem;
+      img {
+        width: 1rem;
       }
     }
     .right-menu {
       display: flex;
       justify-content: flex-end;
-      gap: 1rem;
+      gap: 1.8rem;
+
+      .avatar-separator {
+        border-left: 1px solid var(--border-200);
+        margin: 4px 0;
+      }
     }
   }
   .main-content {
     grid-area: main;
     padding: 30px 20px;
+
+    .main-area {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .add-project-btn {
+      display: flex;
+      gap: 0.7rem;
+    }
+    .project-menu {
+      display: flex;
+      gap: 1.8rem;
+      border-bottom: 1px solid var(--border-200);
+
+      p {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--body-light);
+        margin: 0;
+        padding-bottom: 0.5rem;
+      }
+      p:active {
+        color: var(--accent);
+        border-bottom: 2px solid var(--accent);
+      }
+    }
   }
+  
 }
