@@ -282,6 +282,22 @@ p {
       p {
         margin: 0;
       }
+      .more-menu {
+        align-self: flex-start;
+        .more-btn {
+          background: none;
+          border: none;
+        }
+        .dropdown-menu {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          border: none;
+          border-radius: 8px;
+        }
+        .separator {
+          border-bottom: 1px solid var(--border-100);
+          margin: 0.2rem 1rem;
+        }
+      }
     }
 }
 

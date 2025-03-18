@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Modal = ({title, btnText}) => {
   return (
-    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div className="modal-content">
             <div className="modal-header">
@@ -37,7 +37,7 @@ export const Modal = ({title, btnText}) => {
                         </div>
                     </div>
                     
-                    <div class="form-group">
+                    <div className="form-group">
                         <label  className="form-label" for="startDate">Budget</label>
                         <div className="budget">
                             <img className="dollar-icon" src="./src/assets/dollar-icon.svg" alt="dollar icon" />
