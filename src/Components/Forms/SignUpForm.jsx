@@ -9,7 +9,7 @@ export const SignUpForm = () => {
         </div>
         <div className="form-group">
             <label className="form-label">Email</label>
-            <input type="email" class="form-control" placeholder="Your email address" />
+            <input type="email" className="form-control" placeholder="Your email address" />
         </div>
         <div className="form-group">
             <label className="form-label">Password</label>

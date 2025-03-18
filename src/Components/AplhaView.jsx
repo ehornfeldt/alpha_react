@@ -1,3 +1,6 @@
+import { Modal } from "./Modals/Modal"
+import { ProjectCard } from "./ProjectCard"
+
 function AlphaView({ title, logIn }) {
     return (
         <div className="alpha">
@@ -27,21 +30,23 @@ function AlphaView({ title, logIn }) {
                 <div className="main-area">
                     <div className="header-content">
                         <h2>Projects</h2>
-                        <button type="button" className="btn btn-primary add-project-btn">
+                        <button type="button" className="btn btn-primary add-project-btn" onClick={() => {openModal()}} data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img src="./src/assets/plus.svg" alt="plus icon" />
                             Add Project
                         </button>
                     </div>
                     <div className="project-menu">
-                        <p>ALL[]</p>
-                        <p>STARTED[]</p>
-                        <p>COMPLETED[]</p>
+                        <p>ALL[8]</p>
+                        <p>STARTED[8]</p>
+                        <p>COMPLETED[0]</p>
                     </div>
                     <div className="project-components">
-                        
+                        <ProjectCard title="Website Redesign" app="Gitlab Inc." content="lorum ipsum tralla"/>
+                        <ProjectCard title="Landing Page" app="Bitbucket, Inc." content="lorum impsum lorum ipsum"/>
                     </div>
                 </div>
             </div>
+            <Modal title="Add Project" btnText={"Create"} />
         </div>
     )
 }

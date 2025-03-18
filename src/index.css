@@ -10,6 +10,7 @@
   --border-100: #e4e7eb;
   --border-200: #E3E5E8;
 
+  --surface: #fff;
   --accent: rgb(45, 153, 255);
 }
 
@@ -26,7 +27,9 @@ body {
   font-size: 16px;
   color: var(--body-dark);
 }
-
+h1, h2, h3, h6 {
+  color: var(--heading);
+}
 h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -34,6 +37,14 @@ h1 {
 h2 {
   font-size: 1.8rem;
   font-weight: 700;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 p {
@@ -78,12 +89,16 @@ p {
     text-decoration: none;
   }
 }
-.portal-forms {
+.portal-forms, .modal-form {
   display: flex;
   text-align: start;
   flex-direction: column;
   gap: 1.8rem;
   font-size: 0.8rem;
+
+  input:focus {
+    box-shadow: none;
+  }
 
   .form-label {
     font-weight: 600;
@@ -239,5 +254,95 @@ p {
       }
     }
   }
+}
+
+.project-components {
+  display: flex;
+  gap: 1rem;
   
+    .project-card {
+      flex-grow: 1;
+      border-radius: 16px;
+      background-color: var(--surface);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .card-header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem;
+      h6 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+}
+
+/* Modal */
+.modal {
+  .modal-header{
+    border-bottom: none;
+    .btn-close {
+      font-size: 0.8rem;
+      color: var(--heading);
+    }
+  }
+  .modal-footer {
+    border-top: none;
+    .btn {
+      width: 100%;
+    }
+  }
+  .modal-body {
+    .modal-img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .date-pickers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .budget {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      .dollar-icon {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+      }
+      .budget-form {
+        padding-left: 2.5rem;
+      }
+    }
+
+
+    .subscribe-form {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      button {
+          border-radius: 0 8px 8px 0;
+      }
+      .fa-envelope {
+          position: absolute;
+          top: 50%;
+          left: 1rem;
+          transform: translateY(-50%);
+          color: var(--color-grey-500);
+      }
+  }
+  }
 }
