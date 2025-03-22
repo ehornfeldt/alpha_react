@@ -23,14 +23,37 @@ function AlphaView({ title, logIn }) {
                     <img src="./src/assets/notification-icon.svg" alt="notification icon" />
                     <img src="./src/assets/settings-icon.svg" alt="settings icon" />
                     <div className="avatar-separator" />
-                    <img src="./src/assets/avatar-icon.svg" alt="avatar icon" />
+
+
+                    <div className="more-menu">
+                        <button type="button" className="more-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./src/assets/avatar-icon.svg" alt="avatar icon" />
+                        </button>
+                        <ul className="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <p className="dropdown-item semibold" type="button"> 
+                                    <img src="./src/assets/avatar-icon.svg" alt="edit pen icon" />
+                                    Tommy Mattin-Lassein
+                                </p>
+                            </li>
+                            <li>
+                                <p className="dropdown-item" type="button">
+                                    <img src="./src/assets/logout-icon.svg" alt="trash icon" />
+                                        Log Out
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
                 </div>
             </div>
             <div className="main-content">
                 <div className="main-area">
                     <div className="header-content">
                         <h2>Projects</h2>
-                        <button type="button" className="btn btn-primary add-project-btn" onClick={() => {openModal()}} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" className="btn btn-primary add-project-btn" data-bs-toggle="modal" data-bs-target="#addProjectModal">
                             <img src="./src/assets/plus.svg" alt="plus icon" />
                             Add Project
                         </button>
@@ -43,10 +66,15 @@ function AlphaView({ title, logIn }) {
                     <div className="project-components">
                         <ProjectCard title="Website Redesign" app="Gitlab Inc." content="lorum ipsum tralla"/>
                         <ProjectCard title="Landing Page" app="Bitbucket, Inc." content="lorum impsum lorum ipsum"/>
+                        <ProjectCard title="Landing Page" app="Bitbucket, Inc." content="lorum impsum lorum ipsum"/>
+                        <ProjectCard title="Landing Page" app="Bitbucket, Inc." content="lorum impsum lorum ipsum"/>
+                        <ProjectCard title="Landing Page" app="Bitbucket, Inc." content="lorum impsum lorum ipsum"/>
+                        <ProjectCard title="Landing Page" app="Bitbucket, Inc." content="lorum impsum lorum ipsum"/>
+                        <ProjectCard title="Landing Page" app="Bitbucket, Inc." content="lorum impsum lorum ipsum"/>
                     </div>
                 </div>
             </div>
-            <Modal title="Add Project" btnText={"Create"} />
+            <Modal title="Add Project" btnText={"Create"} modalId="addProjectModal"/>
         </div>
     )
 }

@@ -10,8 +10,11 @@
   --border-100: #e4e7eb;
   --border-200: #E3E5E8;
 
+  --grey-100: #F5F7FA;
+
   --surface: #fff;
   --accent: rgb(45, 153, 255);
+  --red: #FF6640;
 }
 
 * {
@@ -147,7 +150,7 @@ p {
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas: "side top" "side main";
-  height: 100dvh;
+  min-height: 100dvh;
 
   .side-menu {
     grid-area: side;
@@ -190,7 +193,7 @@ p {
     border-bottom: 1px solid var(--border-200);
     display: grid;
     grid-template-columns: auto 1fr;
-    padding: 20px;
+    padding: 0.5rem 1rem;
 
     .search-place {
       display: flex;
@@ -207,14 +210,24 @@ p {
       }
     }
     .right-menu {
-      display: flex;
-      justify-content: flex-end;
-      gap: 1.8rem;
+      align-items: center;
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: end;
+      column-gap: 1.8rem;
 
       .avatar-separator {
         border-left: 1px solid var(--border-200);
-        margin: 4px 0;
+        height: 70%;
       }
+    }
+    p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+    .semibold {
+      font-weight: 600;
     }
   }
   .main-content {
@@ -257,7 +270,8 @@ p {
 }
 
 .project-components {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   
     .project-card {
@@ -282,23 +296,57 @@ p {
       p {
         margin: 0;
       }
-      .more-menu {
-        align-self: flex-start;
-        .more-btn {
-          background: none;
-          border: none;
+      
+        .delete {
+          color: var(--red);
         }
-        .dropdown-menu {
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          border: none;
-          border-radius: 8px;
-        }
+
         .separator {
           border-bottom: 1px solid var(--border-100);
           margin: 0.2rem 1rem;
         }
       }
+}
+
+.more-menu {
+  align-self: flex-start;
+  .more-btn {
+    background: none;
+    border: none;
+  }
+
+  .more-btn {
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .more-btn:active, .more-btn:hover {
+    background-color: var(--grey-100);
+  }
+  .dropdown-menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 8px;
+
+    li {
+      padding: 0.2rem 1rem;
     }
+  }
+
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 8px;
+
+    display: flex;
+    gap: 0.5rem;
+
+    box-sizing: border-box;
+  }
+  .dropdown-item:hover {
+    background-color: var(--grey-100);
+  }
 }
 
 /* Modal */

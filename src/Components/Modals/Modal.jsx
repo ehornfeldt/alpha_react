@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Modal = ({title, btnText}) => {
+export const Modal = ({title, btnText, modalId}) => {
   return (
-    <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade" id={modalId} tabIndex="-1" aria-labelledby={modalId} aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div className="modal-content">
             <div className="modal-header">
